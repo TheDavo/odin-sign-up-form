@@ -31,5 +31,53 @@
         />
       </div>
     </div>
+
+    <div class="sign-up-form-container">
+      <div class="logo-container">
+        <h1>join the</h1>
+        <img
+          id="logo"
+          src="./img/logo_octarine_white.svg"
+          alt="davography logo"
+        />
+        <h1>hub</h1>
+      </div>
+
+      <form class="sign-up-form" action="#" class="sign-up">
+        <div class="form-field">
+          <label for="firstName">FIRST NAME</label>
+          <input type="text" name="firstName" id="firstName" required />
+        </div>
+        <div class="form-field">
+          <label for="lastName">LAST NAME</label>
+          <input type="text" name="lastName" id="lastName" required />
+        </div>
+        <div class="form-field">
+          <label for="phoneNumber">PHONE NUMBER</label>
+          <input type="tel" name="phoneNumber" id="phoneNumber" />
+        </div>
+        <div class="form-field">
+          <label for="email">EMAIL</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-field">
+          <label for="password">PASSWORD</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div class="form-field">
+          <label for="confirmPassword">CONFIRM PASSWORD</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            required
+          />
+        </div>
+        <button id="submit" type="submit">Sign Up</button>
+      </form>
+      <div class="already-member">
+        <p>Already a member? <a href="#">Sign In</a></p>
+      </div>
+    </div>
   </body>
 </html>

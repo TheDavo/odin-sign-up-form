@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Octarine-Light;
+  src: url('./fonts/Octarine/Octarine-Light.otf');
+}
+
+@font-face {
+  font-family: Octarine-Bold;
+  src: url('./fonts/Octarine/Octarine-Bold.otf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +16,7 @@
 
 :root {
   --skew-deg: 22.5deg;
+  --prim-color: rgb(230, 149, 0);
 }
 
 /* GRID LAYOUT */
@@ -63,15 +74,108 @@
 /* SIGN UP FORM */
 .sign-up-form-container {
   position: fixed;
-  top: 25%;
+  top: 5%;
   left: 50%;
   translate: -50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  padding: 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 1;
+  flex-direction: column;
+  box-shadow: 10px 10px black;
 }
 
-.sign-up-form-container h1 {
+.sign-up-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.form-field label {
+  font-family: Octarine-Light, sans-serif;
+  font-weight: light;
+  margin-bottom: 10px;
+}
+
+.form-field input {
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-family: Octarine-Light, sans-serif;
+}
+
+.form-field input:focus {
+  background-color: var(--prim-color);
+  color: white;
+}
+
+.form-field:nth-child(even) {
+  grid-column: 2;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo-container h1 {
+  font-family: Octarine-Bold, sans-serif;
+  font-size: 3rem;
+  padding: 1rem;
+  color: var(--prim-color);
+  text-align: center;
+}
+#logo {
+  width: 300px;
+}
+
+#submit {
+  grid-column: 1 / 3;
+  margin: 1rem 2rem;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  font-family: Octarine, sans-serif;
+  font-size: 1.5rem;
+  transition: ease 100ms;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--prim-color);
+  border: 3px solid white;
+}
+
+#submit:hover {
+  border-radius: 0;
+  box-shadow: 0px 0px 5px 5px var(--prim-color);
+  cursor: pointer;
+  background-color: black;
+}
+
+.already-member {
+  color: white;
+  font-family: Octarine-Light, sans-serif;
+  font-size: 1.25rem;
+  padding: 0rem 2rem;
+}
+
+.already-member a {
+  text-decoration: none;
+  font-family: Octarine-Bold, sans-serif;
+  color: var(--prim-color);
+}
+
+.already-member a:hover {
   color: white;
 }
