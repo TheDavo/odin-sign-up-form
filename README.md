@@ -2,6 +2,8 @@
 
 The Odin Project - Intermediate HTML &amp; CSS - Sign-up Form
 
+![Sign-Up-Form Preview](preview.png)
+
 # Info
 
 This is the intermediate HTML and CSS project from The Odin Project.
